@@ -26,11 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    proto.cpp
+    proto.cpp \
+    appdissect.cpp
 
 HEADERS += \
         mainwindow.h \
-    proto.h
+    proto.h \
+    appdissect.h \
+    types.h
 
 FORMS += \
         mainwindow.ui

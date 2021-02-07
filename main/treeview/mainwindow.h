@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QStandardItemModel>
+#include "proto.h"
 
 #define VERSION "PAN.1.0"
 
@@ -18,10 +19,13 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void slotTreeShow(proto_tree *tree);
+
 private:
     Ui::MainWindow *ui;
-    QStandardItemModel *treemodel;
-    QStandardItemModel *tablemodel;
+    QStandardItemModel *modelTable;
+    QStandardItemModel *modelTree;
+    QStandardItemModel *modelTableHex;
 };
 
 #endif // MAINWINDOW_H

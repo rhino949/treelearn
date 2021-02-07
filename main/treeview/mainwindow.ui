@@ -34,12 +34,6 @@
        <property name="selectionBehavior">
         <enum>QAbstractItemView::SelectRows</enum>
        </property>
-       <property name="gridStyle">
-        <enum>Qt::SolidLine</enum>
-       </property>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
       </widget>
       <widget class="QWidget" name="verticalLayoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -49,11 +43,17 @@
            <enum>Qt::Vertical</enum>
           </property>
           <widget class="QTreeView" name="treeView">
+           <property name="editTriggers">
+            <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+           </property>
+           <property name="indentation">
+            <number>12</number>
+           </property>
            <attribute name="headerVisible">
             <bool>false</bool>
            </attribute>
           </widget>
-          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+          <widget class="QTableView" name="tableView_hex"/>
          </widget>
         </item>
        </layout>
